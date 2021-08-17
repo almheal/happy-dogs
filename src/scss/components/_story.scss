@@ -1,0 +1,132 @@
+.story{
+  position: relative;
+
+  &__inner{
+    padding: 60px 0;
+
+    @media(max-width: 676px){
+      padding: 30px 0;
+    }
+  }
+
+  &__row{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__column{
+    width: 36%;
+
+    &:first-child{
+      width: 28%;
+      @media(max-width: 1140px){
+        width: 50%;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      @media(max-width: 676px){
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 1140px){
+      width: 50%;
+    }
+
+    @media(max-width: 676px){
+      width: 100%;
+    }
+
+    &:last-child{
+      text-align: center;
+
+      @media(max-width: 1140px){
+        width: 100%;
+        text-align: right;
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__text{
+    line-height: 1.4;
+    margin-bottom: 40px;
+  }
+
+  &__title{
+    font-size: 42px;
+    color: $dark-purple;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 270px;
+    span{
+      display: inline-block;
+      color: $azure-craiola;
+      font-size: 100px;
+      text-transform: initial;
+    }
+
+    @media(max-width: 1140px){
+      margin: 0 auto;
+    }
+
+    @media(max-width: 467px){
+      span{
+        font-size: 75px;
+      }
+    }
+  }
+
+  &__link{
+    display: inline-block;
+    color: $azure-craiola;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color .2s;
+
+    &:hover{
+      color: $azure-gray;
+    }
+  }
+
+  &__product{
+    margin: 0 auto;
+  }
+
+  &__dog{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 428px;
+    transform: translateY(50%);
+    @media(max-width: 1600px){
+      width: 328px;
+    }
+
+    @media(max-width: 1150px){
+      bottom: 110px;
+      width: 428px;
+    }
+
+    @media(max-width: 924px){
+      width: 328px;
+    }
+
+    @media(max-width: 676px){
+      width: 228px;
+    }
+
+    @media(max-width: 524px){
+      width: 158px;
+      bottom: 0;
+    }
+  }
+
+  &__product{
+    @media(max-width: 390px){
+      width: 270px;
+    }
+  }
+}

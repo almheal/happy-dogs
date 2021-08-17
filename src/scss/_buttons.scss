@@ -1,0 +1,66 @@
+.main-button{
+  display: inline-block;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 20px;
+  background-color: $azure-craiola;
+  border: 2px solid $azure-craiola;
+  transition: .2s;
+  &:hover{
+    background-color: transparent;
+    color: $azure-craiola;
+    transition: .2s;
+  }
+}
+
+.burger-menu{
+  position: relative;
+  height: 22px;
+  width: 35px;
+  display: none;
+  cursor: pointer;
+
+  &:hover{
+    &::before,
+    &::after,
+    span{
+      background-color: $azure-craiola;
+    }
+  }
+
+  span,
+  &::before,
+  &::after{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: $yellow;
+    transition: background-color .3s;
+  }
+
+  &::before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after{
+    content: '';
+    top: initial;
+    bottom: 0;
+  }
+
+  &.active{
+    display: block;
+  }
+
+  @media(max-width: 924px){
+    display: block;
+  }
+}

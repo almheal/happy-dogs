@@ -1,0 +1,44 @@
+@import './reset';
+@import './variables';
+
+
+//components
+@import './components/header';
+@import './components/intro';
+@import './components/story';
+@import './components/ingredients';
+@import './components/perfect-life';
+@import './components/learn-more';
+@import './components/right-food';
+@import './components/footer';
+
+//buttons
+@import './buttons';
+
+//icons
+@import './icons';
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  color: $gray-brown;
+
+  @media(max-width: 676px){
+    font-size: 18px;
+  }
+}
+
+.container{
+  max-width: 1315px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+html{
+  overflow-y: scroll;
+}

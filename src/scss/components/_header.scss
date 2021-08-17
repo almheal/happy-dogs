@@ -1,0 +1,123 @@
+.header{
+  height: 134px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  @media(max-width: 390px){
+    height: 104px;
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0;
+
+    @media(max-width: 390px){
+      padding: 25px 0;
+    }
+  }
+
+  &__company{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo{
+  &__img{
+    width: 77px;
+    height: 64px;
+
+    @media(max-width: 390px){
+      width: 67px;
+      height: 54px;
+    }
+  }
+}
+
+.menu{
+  @media(max-width: 924px){
+    position: fixed;
+    left: 0;
+    top: 134px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+
+  @media(max-width: 390px){
+    top: 104px;
+  }
+
+  &__list{
+    display: flex;
+
+    @media(max-width: 924px){
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__item{
+    &:last-child{
+      .menu__link{
+        padding-right: 0;
+
+        @media(max-width: 924px){
+          padding-right: 18px;
+        }
+      }
+    }
+
+    @media(max-width: 924px){
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link{
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 26px;
+    color: $white;
+    letter-spacing: 1px;
+    transition: color .2s;
+
+    @media(max-width: 1140px){
+      padding: 26px 15px;
+      font-size: 16px;
+    }
+
+    @media(max-width: 924px){
+      padding: 18px;
+      font-size: 20px;
+    }
+
+    &:hover{
+      color: $azure-gray;
+    }
+  }
+}
+
+.company-name{
+  margin-left: 15px;
+  font-size: 34px;
+  font-family: $amatic-font;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media(max-width: 390px){
+    font-size: 28px;
+  }
+}
